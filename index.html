@@ -1,21 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PracticasGit</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Web</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #333;
+      padding: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-    <h1>HolaMundo</h1>
-    <h1>HolaMundo</h1>
-    <h1>HolaMundo</h1>
-    <h1>HolaMundo</h1>
-    <h1>HolaMundo</h1>
-    <h1>HolaMundo</h1>
-    <h1>HolaMundo</h1>
-    <h1>HolaMundo</h1>
-    <h1>HolaMundo</h1>
-    <h1>HolaMundo</h1>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Menú de navegación:
+         - Inicio: lleva a la sección principal
+         - Servicios: muestra lo que ofreces
+         - Contacto: información o formulario -->
+  </header>
+
+  <section id="inicio">
+    <h1>Bienvenido</h1>
+    <p>Esta es una página web básica con navegación.</p>
+  </section>
+
+  <section id="servicios">
+    <h1>Servicios</h1>
+    <p>Aquí puedes describir tus servicios.</p>
+  </section>
+
+  <section id="contacto">
+    <h1>Contacto</h1>
+    <p>Correo: ejemplo@email.com</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Mi Página Web</p>
+  </footer>
 
 </body>
 </html>
