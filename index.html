@@ -3,95 +3,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Página Web</title>
+  <title>Landing Page</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      line-height: 1.6;
     }
+
     header {
-      background-color: #333;
-      padding: 10px;
+      background: #111;
+      padding: 15px;
+      position: sticky;
+      top: 0;
     }
+
     nav ul {
-      list-style: none;
       display: flex;
       justify-content: center;
-      padding: 0;
+      list-style: none;
       margin: 0;
+      padding: 0;
     }
+
     nav ul li {
-      margin: 0 15px;
+      margin: 0 20px;
     }
+
     nav ul li a {
       color: white;
       text-decoration: none;
       font-weight: bold;
     }
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
+
     section {
-      padding: 40px;
+      padding: 60px 20px;
       text-align: center;
     }
-    footer {
-      background-color: #333;
+
+    #hero {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
       color: white;
-      text-align: center;
-      padding: 10px;
-      position: fixed;
-      bottom: 0;
+      padding: 100px 20px;
+    }
+
+    #hero h1 {
+      font-size: 2.5em;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #111;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: #333;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+      text-align: left;
+    }
+
+    input, textarea {
       width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+<header>
+  <nav>
+    <ul>
+      <li><a href="#hero">Inicio</a></li>
+      <li><a href="#beneficios">Servicios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <!-- Menú de navegación:
-         - Inicio: lleva a la sección principal
-         - Servicios: muestra lo que ofreces
-         - Contacto: información o formulario -->
-  </header>
+<section id="hero">
+  <h1>Diseño de páginas web modernas</h1>
+  <p>Consigue tu web profesional en pocos días</p>
+  <a href="#contacto"><button>Contáctame</button></a>
+</section>
 
-  <section id="inicio">
-    <h1>Bienvenido</h1>
-    <p>Esta es una página web básica con navegación.</p>
-  </section>
+<section id="beneficios">
+  <h2>¿Por qué elegirme?</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Diseño atractivo</h3>
+      <p>Webs modernas y visuales</p>
+    </div>
+    <div class="card">
+      <h3>Responsive</h3>
+      <p>Adaptado a móviles y tablets</p>
+    </div>
+    <div class="card">
+      <h3>Rápido</h3>
+      <p>Entrega en pocos días</p>
+    </div>
+  </div>
+</section>
 
-  <section id="servicios">
-    <h1>Servicios</h1>
-    <p>Aquí puedes describir tus servicios.</p>
-  </section>
+<section id="contacto">
+  <h2>Contacto</h2>
+  <form>
+    <label>Nombre</label>
+    <input type="text" required>
 
-  <section id="contacto">
-    <h1>Contacto</h1>
-    <form>
-      <label for="nombre">Nombre:</label><br>
-      <input type="text" id="nombre" name="nombre" required><br><br>
+    <label>Email</label>
+    <input type="email" required>
 
-      <label for="email">Correo electrónico:</label><br>
-      <input type="email" id="email" name="email" required><br><br>
+    <label>Mensaje</label>
+    <textarea rows="5" required></textarea>
 
-      <label for="mensaje">Mensaje:</label><br>
-      <textarea id="mensaje" name="mensaje" rows="5" required></textarea><br><br>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
 
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2026 Mi Página Web</p>
-  </footer>
+<footer>
+  <p>© 2026 Landing Page</p>
+</footer>
 
 </body>
 </html>
