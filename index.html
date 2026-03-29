@@ -75,7 +75,18 @@
 
   <section id="contacto">
     <h1>Contacto</h1>
-    <p>Correo: ejemplo@email.com</p>
+    <form>
+      <label for="nombre">Nombre:</label><br>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+
+      <label for="email">Correo electrónico:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="mensaje">Mensaje:</label><br>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea><br><br>
+
+      <button type="submit">Enviar</button>
+    </form>
   </section>
 
   <footer>
