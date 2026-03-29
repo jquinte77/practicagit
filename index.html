@@ -3,101 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page</title>
+  <title>Facturación Electrónica Perú</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
+    body { margin:0; font-family: Arial, sans-serif; }
 
-    header {
-      background: #111;
-      padding: 15px;
-      position: sticky;
-      top: 0;
-    }
+    header { background:#0a2540; padding:15px; position:sticky; top:0; }
+    nav ul { display:flex; justify-content:center; list-style:none; margin:0; padding:0; }
+    nav ul li { margin:0 20px; }
+    nav ul li a { color:white; text-decoration:none; font-weight:bold; }
 
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li {
-      margin: 0 20px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 60px 20px;
-      text-align: center;
-    }
+    section { padding:60px 20px; text-align:center; }
 
     #hero {
-      background: linear-gradient(to right, #4facfe, #00f2fe);
-      color: white;
-      padding: 100px 20px;
-    }
-
-    #hero h1 {
-      font-size: 2.5em;
+      background: linear-gradient(to right, #0072ff, #00c6ff);
+      color:white;
+      padding:100px 20px;
     }
 
     button {
-      padding: 10px 20px;
-      border: none;
-      background: #111;
-      color: white;
-      cursor: pointer;
-      border-radius: 5px;
+      padding:12px 25px;
+      border:none;
+      background:#0a2540;
+      color:white;
+      border-radius:5px;
+      cursor:pointer;
     }
 
-    button:hover {
-      background: #333;
-    }
-
-    .cards {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+    .cards { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
 
     .card {
-      background: #f4f4f4;
-      padding: 20px;
-      border-radius: 10px;
-      width: 250px;
+      background:#f4f4f4;
+      padding:20px;
+      border-radius:10px;
+      width:250px;
     }
 
-    form {
-      max-width: 400px;
-      margin: auto;
-      text-align: left;
-    }
-
+    form { max-width:400px; margin:auto; text-align:left; }
     input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      width:100%; padding:10px; margin-bottom:15px;
+      border:1px solid #ccc; border-radius:5px;
     }
 
-    footer {
-      background: #111;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
+    footer { background:#0a2540; color:white; text-align:center; padding:20px; }
   </style>
 </head>
 <body>
@@ -106,40 +53,62 @@
   <nav>
     <ul>
       <li><a href="#hero">Inicio</a></li>
-      <li><a href="#beneficios">Servicios</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#beneficios">Beneficios</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
 </header>
 
 <section id="hero">
-  <h1>Diseño de páginas web modernas</h1>
-  <p>Consigue tu web profesional en pocos días</p>
-  <a href="#contacto"><button>Contáctame</button></a>
+  <h1>Facturación Electrónica en Perú</h1>
+  <p>Emite tus comprobantes electrónicos de forma rápida y segura</p>
+  <a href="#contacto"><button>Solicitar Demo</button></a>
+</section>
+
+<section id="servicios">
+  <h2>Nuestros Servicios</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Facturas electrónicas</h3>
+      <p>Emisión de facturas autorizadas por SUNAT</p>
+    </div>
+    <div class="card">
+      <h3>Boletas electrónicas</h3>
+      <p>Genera boletas de forma automática</p>
+    </div>
+    <div class="card">
+      <h3>Reportes</h3>
+      <p>Control total de tus ventas y clientes</p>
+    </div>
+  </div>
 </section>
 
 <section id="beneficios">
-  <h2>¿Por qué elegirme?</h2>
+  <h2>¿Por qué elegirnos?</h2>
   <div class="cards">
     <div class="card">
-      <h3>Diseño atractivo</h3>
-      <p>Webs modernas y visuales</p>
+      <h3>100% SUNAT</h3>
+      <p>Cumple con la normativa peruana</p>
     </div>
     <div class="card">
-      <h3>Responsive</h3>
-      <p>Adaptado a móviles y tablets</p>
+      <h3>Fácil de usar</h3>
+      <p>Plataforma simple y rápida</p>
     </div>
     <div class="card">
-      <h3>Rápido</h3>
-      <p>Entrega en pocos días</p>
+      <h3>Soporte</h3>
+      <p>Asistencia personalizada</p>
     </div>
   </div>
 </section>
 
 <section id="contacto">
-  <h2>Contacto</h2>
+  <h2>Solicita Información</h2>
   <form>
     <label>Nombre</label>
+    <input type="text" required>
+
+    <label>Empresa</label>
     <input type="text" required>
 
     <label>Email</label>
@@ -153,7 +122,7 @@
 </section>
 
 <footer>
-  <p>© 2026 Landing Page</p>
+  <p>© 2026 Facturación Electrónica Perú</p>
 </footer>
 
 </body>
