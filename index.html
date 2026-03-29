@@ -3,126 +3,156 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Facturación Electrónica Perú</title>
+  <title>Facturación Electrónica Perú | SaaS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin:0; font-family: Arial, sans-serif; }
-
-    header { background:#0a2540; padding:15px; position:sticky; top:0; }
-    nav ul { display:flex; justify-content:center; list-style:none; margin:0; padding:0; }
-    nav ul li { margin:0 20px; }
-    nav ul li a { color:white; text-decoration:none; font-weight:bold; }
-
-    section { padding:60px 20px; text-align:center; }
-
-    #hero {
-      background: linear-gradient(to right, #0072ff, #00c6ff);
-      color:white;
-      padding:100px 20px;
+    :root{
+      --g-blue:#4285F4; --g-red:#EA4335; --g-yellow:#FBBC05; --g-green:#34A853;
+      --bg:#0b1220; --card:#121a2b; --text:#e6ecff; --muted:#9fb0d0;
     }
 
-    button {
-      padding:12px 25px;
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
+
+    header{position:sticky;top:0;background:rgba(11,18,32,.9);backdrop-filter: blur(10px);padding:12px 20px;border-bottom:1px solid rgba(255,255,255,.05)}
+    nav{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:auto}
+    nav ul{display:flex;list-style:none;margin:0;padding:0;gap:20px}
+    nav a{color:var(--text);text-decoration:none;font-weight:500}
+
+    .logo{font-weight:700}
+    .logo span:nth-child(1){color:var(--g-blue)}
+    .logo span:nth-child(2){color:var(--g-red)}
+    .logo span:nth-child(3){color:var(--g-yellow)}
+    .logo span:nth-child(4){color:var(--g-green)}
+
+    section{padding:80px 20px}
+    .container{max-width:1100px;margin:auto}
+
+    #hero{display:flex;flex-direction:column;align-items:center;text-align:center}
+    #hero h1{font-size:2.8em;margin-bottom:15px}
+    #hero p{color:var(--muted);max-width:600px}
+
+    .cta{
+      margin-top:25px;
+      padding:14px 28px;
       border:none;
-      background:#0a2540;
+      border-radius:8px;
+      background:linear-gradient(90deg,var(--g-blue),var(--g-green));
       color:white;
-      border-radius:5px;
+      font-weight:600;
       cursor:pointer;
     }
 
-    .cards { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
 
-    .card {
-      background:#f4f4f4;
-      padding:20px;
-      border-radius:10px;
-      width:250px;
+    .card{
+      background:var(--card);
+      padding:25px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.05);
+      transition:.3s;
     }
 
-    form { max-width:400px; margin:auto; text-align:left; }
-    input, textarea {
-      width:100%; padding:10px; margin-bottom:15px;
-      border:1px solid #ccc; border-radius:5px;
+    .card:hover{transform:translateY(-5px)}
+
+    .badge{display:inline-block;padding:5px 10px;border-radius:20px;font-size:.8em;margin-bottom:10px}
+    .blue{background:rgba(66,133,244,.2);color:var(--g-blue)}
+    .green{background:rgba(52,168,83,.2);color:var(--g-green)}
+    .yellow{background:rgba(251,188,5,.2);color:var(--g-yellow)}
+
+    form{max-width:450px;margin:auto}
+    input,textarea{
+      width:100%;padding:12px;margin-bottom:12px;
+      border-radius:8px;border:1px solid rgba(255,255,255,.1);
+      background:#0f1629;color:white;
     }
 
-    footer { background:#0a2540; color:white; text-align:center; padding:20px; }
+    footer{padding:30px;text-align:center;color:var(--muted)}
+
   </style>
 </head>
 <body>
 
 <header>
   <nav>
+    <div class="logo">
+      <span>F</span><span>a</span><span>c</span><span>t</span>uApp
+    </div>
     <ul>
       <li><a href="#hero">Inicio</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#beneficios">Beneficios</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#features">Servicios</a></li>
+      <li><a href="#benefits">Beneficios</a></li>
+      <li><a href="#contact">Contacto</a></li>
     </ul>
   </nav>
 </header>
 
 <section id="hero">
-  <h1>Facturación Electrónica en Perú</h1>
-  <p>Emite tus comprobantes electrónicos de forma rápida y segura</p>
-  <a href="#contacto"><button>Solicitar Demo</button></a>
+  <div class="container">
+    <h1>Facturación Electrónica en Perú sin complicaciones</h1>
+    <p>Emite facturas y boletas electrónicas en segundos cumpliendo con SUNAT. Plataforma moderna tipo SaaS para empresas.</p>
+    <a href="#contact"><button class="cta">Solicitar Demo</button></a>
+  </div>
 </section>
 
-<section id="servicios">
-  <h2>Nuestros Servicios</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Facturas electrónicas</h3>
-      <p>Emisión de facturas autorizadas por SUNAT</p>
-    </div>
-    <div class="card">
-      <h3>Boletas electrónicas</h3>
-      <p>Genera boletas de forma automática</p>
-    </div>
-    <div class="card">
-      <h3>Reportes</h3>
-      <p>Control total de tus ventas y clientes</p>
+<section id="features">
+  <div class="container">
+    <h2>Servicios</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="badge blue">SUNAT</div>
+        <h3>Facturas electrónicas</h3>
+        <p>Emite comprobantes válidos automáticamente.</p>
+      </div>
+      <div class="card">
+        <div class="badge green">Automático</div>
+        <h3>Boletas electrónicas</h3>
+        <p>Generación rápida y sin errores.</p>
+      </div>
+      <div class="card">
+        <div class="badge yellow">Control</div>
+        <h3>Reportes inteligentes</h3>
+        <p>Visualiza ventas, clientes y crecimiento.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="beneficios">
-  <h2>¿Por qué elegirnos?</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>100% SUNAT</h3>
-      <p>Cumple con la normativa peruana</p>
-    </div>
-    <div class="card">
-      <h3>Fácil de usar</h3>
-      <p>Plataforma simple y rápida</p>
-    </div>
-    <div class="card">
-      <h3>Soporte</h3>
-      <p>Asistencia personalizada</p>
+<section id="benefits">
+  <div class="container">
+    <h2>Beneficios</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>100% Legal</h3>
+        <p>Integración total con normativa SUNAT.</p>
+      </div>
+      <div class="card">
+        <h3>Fácil de usar</h3>
+        <p>Interfaz intuitiva tipo software moderno.</p>
+      </div>
+      <div class="card">
+        <h3>Escalable</h3>
+        <p>Perfecto para emprendedores y empresas.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="contacto">
-  <h2>Solicita Información</h2>
-  <form>
-    <label>Nombre</label>
-    <input type="text" required>
-
-    <label>Empresa</label>
-    <input type="text" required>
-
-    <label>Email</label>
-    <input type="email" required>
-
-    <label>Mensaje</label>
-    <textarea rows="5" required></textarea>
-
-    <button type="submit">Enviar</button>
-  </form>
+<section id="contact">
+  <div class="container">
+    <h2>Solicita una demo</h2>
+    <form>
+      <input type="text" placeholder="Nombre" required>
+      <input type="text" placeholder="Empresa" required>
+      <input type="email" placeholder="Correo" required>
+      <textarea rows="4" placeholder="Mensaje"></textarea>
+      <button class="cta">Enviar</button>
+    </form>
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 Facturación Electrónica Perú</p>
+  © 2026 FactuApp - Facturación Electrónica Perú
 </footer>
 
 </body>
